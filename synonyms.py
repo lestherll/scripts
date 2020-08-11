@@ -1,39 +1,55 @@
 from requests import get
 from bs4 import BeautifulSoup
 
-from os import system, name
+from os import system
 
+
+
+def find_synonyms(word):
+    """
+        This function finds synonyms of a word and return it in list form.
+    """
+
+    #get html content of webpage
+    response = get(f"https://www.thesaurus.com/browse/{word}")  
+    #parse html content
+    soup = BeautifulSoup(response.content, 'html.parser')   
+
+    #find the synonyms in the BeautifulSoup Object
+    synonyms = soup.find('ul', class_ = 'css-17d6qyx-WordGridLayoutBox et6tpn80')
+
+    #remove html tags and extract synonyms from BeautifulSoup object
+    #return synonyms in list form
+    return [ synonym.get_text() for synonym in synonyms.find_all("li") ]
+
+#To clear terminal
 def clear():
     system('cls')
 
-def find_synonyms(word):
-    response = get(f"https://www.thesaurus.com/browse/{word}")
-    soup = BeautifulSoup(response.content, 'html.parser')
-
-    # synonyms = soup.select('.css-umlvd6-MainContentContainer > .css-1e8kf7o-CenterContentContainer > .css-191l5o0-ClassicContentCard > .css-17d6qyx-WordGridLayoutBox')
-    synonyms = soup.find(attrs = {'class': 'css-191l5o0-ClassicContentCard e1qo4u830'})
-
-    # print (f'\nSynonyms for {word}')
-
-    # for synonym in synonyms.find("ul"):
-    #     print(synonym.get_text())
-
-    return [ synonym.get_text() for synonym in synonyms.find("ul") ]
-
+#Main Program
 def main():
-
+    """
+        The user is prompted to enter a word.
+        Synonyms are then shown to the user.
+        Screen will be cleared everytime user enter a new word.
+    """
     while True:
         try:
             word = input("\nEnter word: ").lower()
+
+            #The program will exit if the user enters space as an input
             if word == " ":
                 break
+
             clear()
+
             synonyms = find_synonyms(word)
+            #every word in synonyms list is printed
             for synonym in synonyms:
                 print(synonym)
+
         except:
+            #program restarts if word doesn't exist
             print("Invalid input!")
         
-    
-    
 main()
