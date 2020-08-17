@@ -71,5 +71,6 @@ def main():
             print("INVALID INPUT")
 
 #MAIN PROGRAM
-main()
+if __name__ == "__main__":
+    main()
 
