@@ -1,5 +1,4 @@
 # Scripts
-
 Useful scripts for automating small, everyday tasks.
 
 ## Script Table
@@ -14,10 +13,11 @@ The table belows lists the scripts, what they do, and their requirements.
 | [price_checker](price_checker.py) | gives the current price of an amazon product | BeautifulSoup4,requests       |
 
 ## Usage
----
+
 
 ## Potential
-
 I made these scripts with a 'potential' in mind, meaning, they can be extended upon or integrated into bigger projects / systems.
 
-### For example
+- synonyms.py, antonyms.py, and definition.py can be extended into a dictionary/thesaurus project.
+- download_mp3.py can be integrated into a GUI project for downloading videos from the internet in whatever format. Most of the work is already done by youtube-dl library.
+- price_checker.py can be integrated into a bot project that will notify you whenever the price of a specific product has gone down.
