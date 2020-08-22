@@ -1,5 +1,5 @@
 # Scripts
-Useful scripts for automating small, everyday tasks.
+Useful scripts for automating small, everyday tasks. This scripts can be utilised in bigger projects.
 
 ## Script Table
 The table belows lists the scripts, what they do, and their requirements.
@@ -18,6 +18,6 @@ The table belows lists the scripts, what they do, and their requirements.
 ## Potential
 I made these scripts with a 'potential' in mind, meaning, they can be extended upon or integrated into bigger projects / systems.
 
-- synonyms.py, antonyms.py, and definition.py can be extended into a dictionary/thesaurus project.
-- download_mp3.py can be integrated into a GUI project for downloading videos from the internet in whatever format. Most of the work is already done by youtube-dl library.
-- price_checker.py can be integrated into a bot project that will notify you whenever the price of a specific product has gone down.
+- synonyms.py, antonyms.py, and definition.py can be extended into a **dictionary/thesaurus** project.
+- download_mp3.py can be integrated into a **GUI project** for downloading videos from the internet in whatever format. Most of the work is already done by youtube-dl library.
+- price_checker.py can be integrated into a **bot project** that will notify you whenever the price of a specific product has gone down.
