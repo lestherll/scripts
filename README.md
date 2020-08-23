@@ -13,7 +13,12 @@ The table belows lists the scripts, what they do, and their requirements.
 | [price_checker](price_checker.py) | gives the current price of an amazon product | BeautifulSoup4,requests       |
 
 ## Usage
-
+- Open file
+OR
+- Run via command line (replace *script_name* with the actual name of the file)
+```sh
+python script_name.py
+```
 
 ## Potential
 I made these scripts with a 'potential' in mind, meaning, they can be extended upon or integrated into bigger projects / systems.
