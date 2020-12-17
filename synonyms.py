@@ -16,7 +16,7 @@ def find_synonyms(word):
     soup = BeautifulSoup(response.content, 'html.parser')   
 
     #find the synonyms in the BeautifulSoup Object
-    synonyms = soup.find('ul', class_ = 'css-17d6qyx-WordGridLayoutBox et6tpn80')
+    synonyms = soup.find('ul', class_='css-1wdx5pq et6tpn80')
 
     #remove html tags and extract synonyms from BeautifulSoup object
     #return synonyms in list form
